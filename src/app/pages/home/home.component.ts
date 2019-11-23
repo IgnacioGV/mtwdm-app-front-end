@@ -12,7 +12,17 @@ export class HomeComponent implements OnInit {
   constructor() { 
 
     PNotifyButtons; // Initiate the module. Important!
-    PNotify.alert('Bienvenidos a mi sitio web');
+    PNotify.alert({
+      title: 'Notificacion Exitosa',
+      text: 'Texto a mostrar',
+      animation: 'fade',
+      icon: 'fa-home',
+      addClass: 'alert alert-success border-success alert-styled alert-arrow-right',
+      shadow: true,
+      hide: true,
+      delay: 1000 * 10,
+      type: 'success'
+    });
 
   }
 
