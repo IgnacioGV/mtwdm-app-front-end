@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+    app-tramites:
+        container_name: 'Angular-App-Autos'
+        build:
+            context: .
+            dockerfile: Dockerfile
+
+        restart: always
+        ports:
+            - '8080:80'
+
+environment:
+
+            - VIRTUAL_HOST=app.ignatus.info
